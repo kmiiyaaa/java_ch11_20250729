@@ -12,10 +12,16 @@ public class ToLowerUpperTest {
 		System.out.println(str1.toLowerCase()); //  모두 소문자로 변경
 		System.out.println(str1);  // 원본을 건드리진 않았다 -> 새로 저장해서 써야함
 		System.out.println(str2.toUpperCase()); // 모두 대문자로 변경 - 원본은 수정하지 않음
-		str2 = str2.toUpperCase(); //대문자로 변환 후 overwrite(덮어쓰기) , 선언전에는 다르다고 나오고 선언후에는 같다고 나온다.
+		// str2 = str2.toUpperCase(); //대문자로 변환 후 overwrite(덮어쓰기) , 선언전에는 다르다고 나오고 선언후에는 같다고 나온다.
 		
 		
-		if(str2.equals(str3)) {
+		if(str2.equals(str3)) {  // fasle, 대/소문자 구별하여 비교
+			System.out.println("두 문자열은 같다");
+		} else {
+			System.out.println("두 문자열은 다르다");
+		}
+		
+		if(str2.equalsIgnoreCase(str3)) {  //true, 대/소문자를 구별하지 않고 비교
 			System.out.println("두 문자열은 같다");
 		} else {
 			System.out.println("두 문자열은 다르다");
