@@ -12,7 +12,7 @@ public class DateTest {
 		System.out.println(nowTime.toString());  // 현재시간을 문자열로 저장한것
 		
 		SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy년 MM월 dd일");
-		SimpleDateFormat dateFormat2 = new SimpleDateFormat("yyyy년 MM월 dd일 hh시 mm분 ss초");
+		SimpleDateFormat dateFormat2 = new SimpleDateFormat("yyyy년 MM월 dd일 E요일 hh시 mm분 ss초");
 		String date2 = dateFormat1.format(nowTime);
 		System.out.println(date2);
 		String date3 = dateFormat2.format(nowTime);
