@@ -18,15 +18,32 @@ public class Test4 {
 		
 		// str = str.toLowerCase(); 만약, 다른문자열에 중간중간 대문자가 있으면 미리 소문자로 만들고 하기 좋음
 		
-		result += Character.toUpperCase(str.charAt(0)); // 첫값 I지정? 
+		 result += Character.toUpperCase(str.charAt(0)); 
 		
 		for (int i = 1; i<str.length();i++) {
-			if(str.charAt(i-1) == ' ') { //해당인덱스 전이 공백이면
-				result += Character.toUpperCase(str.charAt(i)); //현재 인덱스 대문자로 고치기
+			if(str.charAt(i-1) == ' ') {     //해당인덱스 전이 공백이면
+				result += Character.toUpperCase(str.charAt(i));   //현재 인덱스 대문자로 고치기
 			} else { //공백이 아니면
-				result += str.charAt(i); //기존글자에 이어붙이기
+				result += str.charAt(i);   //기존글자에 이어붙이기
 			}
 		}
+		
+		/* 
+		 for(i=0;i<str.length();i++){
+		 if(i==0){
+		 	//str.chartAt(i) -> toUpperCase() 적용안됨
+		 	result = result+String.valueOf(str.chartAt(0)).toUpperCase();
+		 	}else if (String.valueOf(str.chartAt(0)).equals(" ")) {          //valueOf() : ()안 값을 string 타입으로만들어주는것
+		 	reuslt = result + str.chatAt(i);
+		 	result = result + String.valueOf(str.chatAt(i+1)).toUpperCase();
+		 	i++;
+		 	//이미 다음 i값에 해당하는 문자는 대문자로 변경되어 삽입완료 -> 다음 문자에 대한 i값은 skip
+		 	} else {
+		 	reuslt = result + String.valueOf(str.cahrtAt(i));
+		 	}
+		  
+		 
+		 */
 
 
 			System.out.println(result); 

@@ -12,8 +12,8 @@ public class Test3 {
 				String result = "";
 				
 				for (int i = 0; i < str.length(); i++) {
-			       char c = str.charAt(i); // 하나씩 추출되니까 string말고 char,
-			       if (result.indexOf(c) == -1) {  //indexOf() : 문자열 찾기
+			       char c = str.charAt(i);                // 하나씩 추출되니까 string말고 char
+			       if (result.indexOf(c) == -1) {         //indexOf() : 문자열 찾기
 			                result += c;
 			            }
 			        }

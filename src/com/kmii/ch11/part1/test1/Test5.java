@@ -10,19 +10,18 @@ public class Test5 {
 		//		char값이..? 
 		
 		 String str = "Hello123, Java456";
-	        int count = 0;
+	      int count = 0;
 
-	        for (int i = 0; i < str.length(); i++) {
-	            char ch = str.charAt(i);   // 한글자씩 - char
-	            int ascii = (int) ch;      // 
-
-	            // 대문자 A~Z 또는 소문자 a~z 아스키코드값
-	            if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) {
-	                count++;
-	            }
+	     for (int i = 0; i < str.length(); i++) {
+	          char ch = str.charAt(i);   // 한글자씩 - char
+	          int ascii = (int) ch;     
+	    // 대문자 A~Z 또는 소문자 a~z 아스키코드값
+	      if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) {
+	          count++;
 	        }
+	    }
 
-	        System.out.println("알파벳 개수: " + count);
+	     System.out.println("알파벳 개수: " + count);
 
 	}
 
